@@ -1,0 +1,548 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+body {
+    font-family: sans-serif;
+    overflow-x: hidden;
+    margin-bottom: 20px !important;
+    background-color: rgb(235, 235, 235) !important;
+ 
+}
+
+/* napbar */
+
+nav {
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    justify-content: space-around;
+    height: 50px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+   align-items: center;
+  
+
+    
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width:40%;
+    justify-content: space-between;
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
+    
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.8em;
+    z-index: 2;
+    text-shadow:1px 1px 0px rgba(0,0,0,1);
+
+}
+
+
+.logo {
+    font-family: 'Viga', sans-serif;
+    letter-spacing: 2;
+    color: white;
+    font-size: 15px;
+    position: relative;
+    z-index: 1;
+    text-shadow:1px 1px 0px rgba(0,0,0,1);
+}
+
+nav ul li a:hover {
+    color: grey;
+    z-index: 1;
+}
+
+
+
+
+/* Menu togle  */
+
+.menu-toggle {
+  display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -6px;
+    top:-3px;
+    opacity: 0;
+    cursor:pointer;
+    z-index: 2;
+
+}
+.menu-toggle span {
+    display:block;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    border-radius:3px;
+    transition: all 0.8s;
+}
+
+/* Hamburger Menu Animation */
+
+/* Anak pertama */
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+.menu-toggle input:checked ~ :nth-child(2) {
+   transform: rotate(45deg) translate(6px, 1px) ;
+}
+
+/* anak kedua */
+
+
+.menu-toggle span:nth-child(4) {
+    transform: 0 100%;
+}
+
+
+.menu-toggle input:checked ~ :nth-child(4) {
+    transform: rotate(-49deg) translate(1px, -2px) ;
+}
+
+/* anak ke 3 */
+
+.menu-toggle :checked ~ :nth-child(3) {
+ transform:scale(0);
+ opacity: 0;
+}
+
+
+
+
+/* jumbotron */
+
+.jumbotron {
+ 
+background-image: url(img/nikee.jpg);
+  height: 700px;
+   margin-top: -105px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+
+}
+
+
+.jumbotron h1 {
+    margin: auto;
+    padding-top: 250px;
+    color: orange;
+    font-family: 'viga',sans-serif;
+    font-size: 155px;
+    text-shadow:1px 2px 0px rgb(48, 48, 48);
+    
+}
+
+.jumbotron h3 {
+    font-size: 95px;
+    color:white;
+
+}
+
+
+/* Gradasi */
+
+.jumbotron::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+
+
+.jumbotron .container {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+/* BODY */
+
+
+
+
+.head {
+    font-size: 18px;
+    margin-top: 100px !important;
+    line-height: 1.8;
+    font-family: sans-serif;
+}
+
+
+.head h3 {
+    font-family: 'montserrat';
+    font-weight: bold;
+}
+
+
+
+/* CONTENT */
+
+
+.content  {
+    margin-top:300px !important;
+    
+    
+}
+
+.content h3 {
+    text-align: center !important;
+   
+    font-family: Montserrat;
+}
+
+.content p {
+    text-align:right !important;
+    font-family: sans-serif;
+    line-height: 1.8em;
+    letter-spacing: 1;
+    font-size: 14;
+    padding-top: 3px;
+  
+}
+
+
+/* content 2 */
+
+.content2 {
+    margin-top: 300px !important;
+
+}
+
+
+.content2 p {
+    text-align: left !important;
+    font-family: sans-serif;
+    line-height: 2;
+    letter-spacing: 1;
+    font-size: 14;
+  
+}
+
+
+
+.content2 h3 {
+    text-align: center !important;
+    font-family: Montserrat;
+    font-weight: bold;
+}
+
+
+/* content 3 */
+
+
+
+.content3 {
+    margin-top: 200px !important;
+
+}
+
+
+.content3 p {
+    text-align: right !important;
+    font-family: sans-serif !important;
+    line-height: 2;
+    letter-spacing: 1;
+    font-size: 14;
+    
+  
+}
+
+
+.content3 h3 {
+    text-align: center;
+    font-family: 'Montserrat';
+    font-weight: bold;
+}
+
+
+
+
+/* footer */
+
+
+.footer p {
+    margin-top: 200px;
+    text-align: center;
+    font-family: sans-serif;
+    color: rgb(59, 58, 58);
+    height: 50px;
+    align-items: center;
+}
+
+
+section {
+    padding-top: 5rem;
+}
+
+
+
+/* responsive breakpoints */
+
+/* ukuran tablet */
+@media screen and (max-width: 768px) {
+    nav ul {
+        width: 50%;
+    }
+
+
+
+    .jumbotron h1 {
+        margin: auto;
+        padding-top: 250px;
+        color: orange;
+        font-family: 'viga',sans-serif;
+        font-size: 100px;
+        text-shadow:1px 2px 0px rgb(48, 48, 48);
+        
+    }
+
+
+    .jumbotron h3 {
+        font-size:70px;
+        padding-left: 10px;
+        font-weight: 200;
+        color: rgb(255, 255, 255);
+        box-sizing: border-box;
+        font-family: viga;
+    
+    }
+        
+
+    .head {
+        font-size: 18px;
+        margin-top: 100px !important;
+        line-height: 1.8;
+        font-family: sans-serif;
+        text-align: center;
+    }
+
+
+
+
+
+}
+
+/* ukuran mobile  */
+
+
+@media screen and (max-width: 576px) {
+    nav ul li a:hover {
+        color: grey;
+  
+    }
+    
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 0.8em;
+     
+
+    
+    }
+    
+    .logo {
+       
+        font-size: 10px !important;
+        color: rgb(2, 2, 2);
+        
+        
+    }
+   
+    nav {
+        z-index: 2;
+        background-color: rgb(255, 255, 255) !important;
+        position: fixed;
+        width: 100%;
+       
+      
+    }
+
+
+    .menu-toggle {
+        display: flex;
+        z-index: 2;
+   
+       
+    
+    }
+
+    .menu-toggle span {
+        background-color: rgb(0, 0, 0);
+      
+    }
+
+
+    nav ul {
+        position:absolute;
+        right: 0;
+        top:0;
+        width: 80%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+       background-color: rgb(77, 76, 76);
+       
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+
+    nav ul.slide {
+        transform: translateX(0);
+        opacity: 1;
+        z-index: 2;
+    }
+
+
+
+    .jumbotron {
+   background-image: url(img/nikee.jpg); 
+    height: 450px;
+   background-size: 700px;
+    margin-top: 100px;
+    margin: auto;
+
+  
+
+        
+    }
+
+
+    .jumbotron::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: 0;   
+        background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+      
+      
+    }
+
+
+
+
+
+
+
+    .jumbotron h1 {
+        padding-top: 100px;
+        color: darkorange;
+        font-family: 'viga',sans-serif;
+        font-size: 90px;
+        z-index: -1;
+        text-shadow:1px 1px 0px rgb(165, 80, 11);
+        text-align: left;
+        margin-bottom: 10px;
+        
+    }
+
+
+  .jumbotron h3 {
+    font-size:50px;
+    padding-left: 10px;
+    font-weight: 200;
+    color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    font-family: viga;
+
+
+  }
+  
+    
+
+
+    .lead {
+        color: rgb(255, 255, 255);
+        text-align: center;
+        color: white;
+        font-family: 'montserrat', sans-serif;
+        font-size: 14px !important;
+        text-shadow:1px 1px 1px rgb(0, 0, 0);
+    }
+    
+
+
+    /* BODY */
+
+    .head {
+       
+        margin-top: -10px !important;
+        font-family: sans-serif;
+        text-align: left;
+        line-height: 1.8;
+
+    }
+
+
+
+/* CONTENT */
+
+
+.content h3 {
+    text-align: left !important;
+}
+
+.content p {
+    text-align: left !important;
+}
+
+
+/* content 2 */
+
+
+
+.content2 h3 {
+text-align: left;
+margin-top: 20px!important;
+
+}
+
+
+
+/* content3 */
+
+.content3 h3 {
+    text-align: left;
+}
+
+
+.content3 p {
+    text-align: left !important;
+}
+
+
+
+
+
+}
